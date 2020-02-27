@@ -1,4 +1,4 @@
-package main
+package implementation
 
 import (
 	"errors"
@@ -33,7 +33,7 @@ func (s *Stack) Pop() (string, bool) {
 	}
 }
 
-func calculatePostfixExpression(postfixExpression string) (float64, error) {
+func CalculatePostfixExpression(postfixExpression string) (float64, error) {
 	if postfixExpression == "" {
 		return 0, errors.New("Postfix expression string cannot be empty")
 	}
@@ -97,12 +97,3 @@ func calculatePostfixExpression(postfixExpression string) (float64, error) {
 
 	return resultInt, err
 }
-
-// func main() {
-// 	result, err := calculatePostfixExpression("4.0 2.0 - 3.0 * 5.0 ^")
-// 	if err == nil {
-// 		fmt.Println(result)
-// 	} else {
-// 		fmt.Println(err)
-// 	}
-// }
