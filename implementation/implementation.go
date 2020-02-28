@@ -33,6 +33,7 @@ func (s *Stack) Pop() (string, bool) {
 	}
 }
 
+// CalculatePostfixExpression : calculates the result value of postfix expression
 func CalculatePostfixExpression(postfixExpression string) (float64, error) {
 	if postfixExpression == "" {
 		return 0, errors.New("Postfix expression string cannot be empty")

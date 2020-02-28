@@ -13,6 +13,23 @@ type TestSuite struct {}
 
 var _ = Suite(&TestSuite{})
 
+// ExampleCalculatePostfixExpression example how to use CalculatePostfixExpression function
+// to calculate the result value of postfix expression
+func (s * TestSuite) ExampleCalculatePostfixExpression(c *C) {
+	// expression to calculate
+	var expression = "7 2 - 6.0 * 5 + 6 / 10 * 4 -"
+
+	// calculate the expression
+	result, err := CalculatePostfixExpression(expression)
+	// check if err is not a nil
+	if err != nil {
+		c.Assert(err, NotNil)
+	}
+
+	// check 
+	c.Assert(result, Equals, 54.33333)
+}
+
 func (s * TestSuite) TestPositivePostfixExpressionWithTwoOperands(c *C) {
 	result, err := CalculatePostfixExpression("10 11.5 +")
 
