@@ -16,11 +16,13 @@ func main() {
 	
 	// calculate the result value of postfix expression
 	result, err := CalculatePostfixExpression(postfixExpression)
+
 	// check if error is not nil
 	if err != nil {
 		fmt.Println("Error: " + err.Error())
 		os.Exit(1)
 	}
+
 	// print the result
 	fmt.Printf("Result: %f\n", result)
 }
