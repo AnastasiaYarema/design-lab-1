@@ -16,7 +16,7 @@ Pass your postfix expression as arguments to ./out/example
 
 ## Testing
 ```bash
-make test
+make test # run tests with gocheck
 ```
 
 ## Documentation
