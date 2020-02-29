@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+  // print current build version
 	fmt.Println("Build version: " + BuildVersion)
 
 	// join command line arguments into the string by whitespace separator
